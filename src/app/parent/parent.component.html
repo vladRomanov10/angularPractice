@@ -1,0 +1,10 @@
+<p>parent компонент</p>
+<!--код для практики ngModel-->
+
+<input type="text" [(ngModel)]="inputValue">
+<p>Значение инпута: {{ inputValue }}</p>
+
+<!--код для практики обработки событий из дочерного компонента в родительском-->
+<p>Колличество кликов: {{clicks}}</p>
+
+<app-child [item]="inputValue" (onChange)="onChanged($event)"></app-child>
