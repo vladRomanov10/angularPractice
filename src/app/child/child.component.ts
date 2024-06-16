@@ -1,9 +1,10 @@
 import {Component, EventEmitter, Input, Output} from '@angular/core';
+import { FormsModule } from "@angular/forms";
 
 @Component({
   selector: 'app-child',
   standalone: true,
-  imports: [],
+  imports: [FormsModule],
   templateUrl: './child.component.html',
   styleUrl: './child.component.scss'
 })
@@ -17,5 +18,14 @@ export class ChildComponent {
 
   change(increased:boolean) {
     this.onChange.emit(increased)
+  }
+
+  //код для практики двухсторонней привзяки
+  @Input() userName:any =''
+  @Output() userNameChange = new EventEmitter()
+
+  onNameChange(model: any) {
+    this.userName = model
+    this.userNameChange.emit(model)
   }
 }

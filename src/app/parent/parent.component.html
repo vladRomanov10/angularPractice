@@ -1,10 +1,14 @@
-<p>parent компонент</p>
-<!--код для практики ngModel-->
+<div class="parent-component">
+    <p>parent компонент</p>
+    <!--код для практики ngModel-->
 
-<input type="text" [(ngModel)]="inputValue">
-<p>Значение инпута: {{ inputValue }}</p>
+    <input type="text" [(ngModel)]="inputValue">
+    <p >Значение инпута: {{ inputValue }}</p>
 
-<!--код для практики обработки событий из дочерного компонента в родительском-->
-<p>Колличество кликов: {{clicks}}</p>
+    <!--код для практики обработки событий из дочерного компонента в родительском-->
+    <p>Колличество кликов: {{clicks}}</p>
 
-<app-child [item]="inputValue" (onChange)="onChanged($event)"></app-child>
+    <!--код для практики двухсторонней привзяки-->
+    <p>Выбранное имя: {{name}}</p>
+</div>
+<app-child [item]="inputValue" (onChange)="onChanged($event)" [(userName)] = "name"></app-child>

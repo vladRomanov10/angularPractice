@@ -4,3 +4,5 @@
 <!--код для практики обработки событий из дочерного компонента в родительском-->
 <button (click)="change(true)">Увеличить</button>
 <button (click)="change(false)">Уменьшить</button>
+
+<input class="input" [ngModel]="userName" (ngModelChange)="onNameChange($event)">

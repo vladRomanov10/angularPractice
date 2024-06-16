@@ -21,4 +21,5 @@ export class ParentComponent {
   }
 
   //код для практики двусторонней привязки
+  name = 'Tom'
 }
