@@ -1,0 +1,29 @@
+$fz: 80px;
+
+@mixin fontz($f, $c) {
+  font-size: $f;
+  color: $c;
+}
+
+.block {
+  padding: 50px;
+
+  line-height: 20px;
+  >p {
+    @include fontz(55px, yellow)
+  }
+  &__text {
+    font-size: $fz;
+    span {
+      color: green;
+    }
+  }
+}
+
+.link {
+  color: blue;
+  text-decoration: underline;
+  &:hover {
+    color: green;
+  }
+}
