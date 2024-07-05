@@ -11,4 +11,9 @@ import {ChildComponent} from "../child/child.component";
 })
 export class ParentComponent {
 
+  myVar:object= {name: 'Vlad'}
+
+  checkValue () {
+    console.log(this.myVar)
+  }
 }
