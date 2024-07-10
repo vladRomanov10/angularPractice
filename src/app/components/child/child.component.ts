@@ -1,4 +1,4 @@
-import {Component, Input} from '@angular/core';
+import {Component} from '@angular/core';
 import {FormsModule} from "@angular/forms";
 
 
@@ -10,13 +10,5 @@ import {FormsModule} from "@angular/forms";
   styleUrl: './child.component.scss'
 })
 export class ChildComponent {
- @Input () myVar:object= {}
 
-  checkValue () {
-    console.log(this.myVar)
-  }
-
-  changeMyVar () {
-   
-  }
 }

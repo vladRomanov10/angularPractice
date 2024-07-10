@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { ParentComponent } from "./components/parent/parent.component";
+import {Component} from '@angular/core';
+import {RouterOutlet} from '@angular/router';
+import {ParentComponent} from "./components/parent/parent.component";
 
 @Component({
   selector: 'app-root',
@@ -10,5 +10,5 @@ import { ParentComponent } from "./components/parent/parent.component";
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'others';
+
 }
