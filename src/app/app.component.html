@@ -1,2 +1,6 @@
-<p class="app_p">Параграф app.component</p>
-<app-parent></app-parent>
+<ul>
+    @for (user of filteredUsers; track $index) {
+        <li>{{user.gender}} : {{user.age}}</li>
+    }
+</ul>
+<p>Average age: {{averageUsersAge}}</p>
